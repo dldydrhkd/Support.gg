@@ -3,4 +3,6 @@ const app = express();              //app에 express() 함수의 변환 값을 �
 
 app.get('/search',function(req,res){
   console.log("hello");
+  console.log("teemo");
 });
+
