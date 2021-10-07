@@ -9,6 +9,10 @@ app.get('/search', function(req,res){
   console.log(req.query.search);
 })
 
+app.get('/login', function(req,res){
+  res.sendFile(__dirname + '/login.html')
+})
+
 app.listen(8080, function(){
   console.log('Listening at 8080');
 });
