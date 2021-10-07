@@ -5,15 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support.gg</title>
   <style>
-
+    div.title{
+      height: 400px;
+      width: 100%;
+      background-color:#B3CDFF;
+      text-align:center;
+    }
+    div.title_name{
+      position: relative;
+      top:40%;
+      left:50%;
+      font-family: 'Raleway', sans-serif;
+      transform:translate(-50%,-50%);
+      font-size:100px;
+    }
+    div.searchBox{
+      position: relative;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    div.login{
+      text-align:right;
+    }
   </style>
 </head>
 <body>
-  <div class = "searchBox">
-    <form action="server.js">
-      <label>소환사 이름: <input type="text" id="search" placeholder="소환사 이름을 입력하세요"/></label>
-      <input type="submit" value="검색">
-    </form>
+  <div class = "title">
+    <div class = "login">
+      <button type="button" onclick="location.href='login'">로그인</button>
+    </div>
+    <div class = "title_name">Support.gg</div>
+    <div class = "searchBox">
+      <form method="get" action="/search">
+        <label>소환사 이름: <input type="text" name="search" placeholder="소환사 이름을 입력하세요"/></label>
+        <input type="submit" name="submit" value="검색">
+      </form>
+    </div>
   </div>
 </body>
 </html>

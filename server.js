@@ -5,6 +5,10 @@ app.get('/',function(req,res){
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/search', function(req,res){
+  console.log(req.query.search);
+})
+
 app.listen(8080, function(){
   console.log('Listening at 8080');
 });
