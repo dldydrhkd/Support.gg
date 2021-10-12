@@ -32,6 +32,6 @@ passport.deserializeUser(function(req, user, done) {
   req.session.sid = user.name;
   console.log("Session Check :" +req.session.sid);
     done(null, user);
-  });
+});
 
 module.exports = router;
